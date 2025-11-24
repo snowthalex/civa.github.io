@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para o meu amor</title>
+
+    <style>
+        body{
+            background-color: rgb(0, 0, 0);
+        }
+
+        .painel{
+            margin: auto;
+            background-color: white;
+            inline-size: 500px;
+            block-size: 500px;
+            border-radius: 20px;
+            text-align: center;
+            padding-block-start: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #sim{
+            block-size: 40px;
+            inline-size: 60px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-inline-start: -50px;
+        }
+        #nao{
+            position: absolute;
+            block-size: 40px;
+            inline-size: 60px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-inline-start: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="painel">
+        <h1> Maria Eduarda Civa</h1>
+
+        <img src="https://imgur.com/a/wSLqU6J">
+
+        <h2>Aceita sair comigo?</h2>
+        
+
+        <a href="https://www.tiktok.com/@tarcisio12413/video/7576433140843973908?is_from_webapp=1&sender_device=pc&web_id=7576433204379780609"><button id="sim" > Sim! </button></a>
+        <button onmouseover="fuja()" id="nao"> Não! </button>
+        
+    </div>
+
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById("nao")
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+
+
+        }
+    </script>
+
+
+
+    
+</body>
+</html>
